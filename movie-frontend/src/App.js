@@ -1,6 +1,9 @@
 import './App.css';
 import api from './api/axiosConfig';
 import {useState, useEffect} from "react";
+import Layout from "./components/Layout";
+import {Routes, Route} from "react-router-dom";
+import Home from "./components/home/Home";
 
 function App() {
   // movies: store an array of movie data returned from the call to the relevant api endpoint
@@ -26,7 +29,13 @@ function App() {
 
   return (
     <div className="App">
+      <Routes>
+        <Route path="/" element={<Layout/>}>
+          <Route path="/" element={<Home movies={movies}/>}>
 
+          </Route>
+        </Route>
+      </Routes>
     </div>
   );
 }
