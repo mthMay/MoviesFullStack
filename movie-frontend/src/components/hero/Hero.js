@@ -14,19 +14,21 @@ const Hero = ({movies}) => {
                             return(
                                 <Paper key={movie.imdbId}>
                                     <div className="movie-card-container">
-                                        <div className="movie-card">
-                                            <div className="movie-poster">
-                                                <img src={movie.poster} alt=""/>
-                                            </div>
-                                            <div className="movie-title">
-                                                <h4>{movie.title}</h4>
+                                        <div className="movie-card" style={{"--img": `url(${movie.backdrops[0]})`}}>
+                                            <div className="movie-detail">
+                                                <div className="movie-poster">
+                                                    <img src={movie.poster} alt=""/>
+                                                </div>
+                                                <div className="movie-title">
+                                                    <h4>{movie.title}</h4>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </Paper>
                             )
                         })
-                    ):(<p>Loading movies...</p>)
+                    ) : (<p>Loading movies...</p>)
                 }
             </Carousel>
         </div>
