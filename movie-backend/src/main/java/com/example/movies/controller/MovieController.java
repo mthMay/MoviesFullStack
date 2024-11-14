@@ -4,7 +4,6 @@ package com.example.movies.controller;
 
 import com.example.movies.service.MovieService;
 import com.example.movies.model.Movie;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
